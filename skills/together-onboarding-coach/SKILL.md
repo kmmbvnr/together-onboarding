@@ -85,7 +85,8 @@ If invoked with no argument, run `status`, then continue into the next right sub
 **status** — call `status`. Print `banner` verbatim in one ```` ```bash ```` fenced block. Below it, in
 plain words: where they are (track + `milestone`, e.g. "4 of 11 backend topics done"), a neutral "last
 session: N days ago" line only if `engagement.days_since_last_drill ≥ 2` (no guilt), and one concrete next
-step. Then announce a short plan (~3 drills) and continue:
+step. Then announce a session plan sized to about **45 minutes** of work — pick enough drills to fill it
+(quick reads are a few minutes each; install/setup steps run longer, so plan fewer of them) — and continue:
 - `level == null` → **diagnose** (the intake / first-time setup).
 - `track.track_needs_set == true` → **track gate**, then **practice**.
 - otherwise → **practice**.
@@ -136,8 +137,8 @@ the brief's `instructions`. The teaching posture, every drill:
   you don't paste the answer. The codebase and the running app are the teacher.
 - For "trace it" drills (how a like becomes a notification, how a request flows front→back): make them name
   the files and functions in the chain before you confirm.
-- For "change it" drills (add a field + migrate, add a tab, add an i18n key): they make the change and run
-  it; you check it works against the rubric.
+- For "run it / observe it" drills (run a command, watch the Network tab, read the Django shell output):
+  they do it and report what they saw; you check it against the rubric. No editing the codebase.
 - Show the Gap when they miss; name what they misunderstood; keep turns short.
 
 **Capture where it was hard — this is the whole point of the data.** When the intern stumbles, gets it
@@ -152,16 +153,18 @@ End each drill with `record {action: "ingest", ...}` using the brief's `topic_id
 the `format` you ran; `result: "ok"` only if they genuinely completed it against the rubric, plus a
 one-line clinical `note` (so a failed/aborted drill is itself a difficulty signal per topic). React briefly and specifically — a correct answer gets a ≤6-word note ("right —
 that's the auth seam"), a miss a ≤4-word ack ("close, keep tracing"); routine correctness is a silent ✓.
-Then call `practice` again until the plan count is reached; don't reprint the `banner` between drills.
+Then call `practice` again until the ~45-minute session plan is done (or they want to stop); don't reprint
+the `banner` between drills. Close in 2–4 honest lines — interns typically do **several ~45-minute sessions
+across a day**, so make stopping and coming back later easy and guilt-free.
 
 ### workspace (where drills run)
 
 The drills run in the intern's **Together repo checkout**, so set the workspace once at the start:
 ask where their checkout is (default the current working directory if you're already inside the repo), then
 `record {action: "workspace_set", language: "together-onboarding", enabled: true, path: "<repo path>"}`. It's
-remembered; pass `workspace: true` to `practice`. Keep changes contained and reversible — drills that edit
-code (add a field, a tab, an endpoint) are meant to be tried and then reverted; remind them to use git and
-not to commit drill scratch changes.
+remembered; pass `workspace: true` to `practice`. Drills only **read, run, and inspect** — they don't edit
+the codebase, so there's nothing to revert; if a drill has them run a throwaway command or shell snippet,
+keep it out of the repo's tracked files.
 
 ### update
 
