@@ -1,0 +1,17 @@
+{
+  "name": "together",
+  "owner": {
+    "name": "Together"
+  },
+  "metadata": {
+    "description": "Together / Хочу.Вместе plugins. Install the intern onboarding coach from here.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "together-onboarding",
+      "source": "./together-onboarding",
+      "description": "Onboarding coach for the Together codebase: hands-on, codebase-grounded drills across general concepts, repo orientation, the backend (Django) and the frontend (mates/), backed by the RunDrill MCP engine. Run /together-onboarding-coach."
+    }
+  ]
+}

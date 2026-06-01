@@ -1,0 +1,13 @@
+{
+  "name": "together-onboarding",
+  "version": "0.1.0",
+  "description": "Intern onboarding coach for the Together / Хочу.Вместе codebase — guided, hands-on drills through the backend (Django) and frontend (React mini app), inside your AI agent.",
+  "author": {
+    "name": "Together"
+  },
+  "mcpServers": {
+    "together-onboarding": {
+      "serverURL": "https://mcp.rundrill.com/prog/together-onboarding"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "together-onboarding",
+  "version": "0.1.0",
+  "description": "Intern onboarding coach for the Together / Хочу.Вместе codebase — guided, hands-on drills through the backend (Django) and frontend (React mini app), inside your AI agent.",
+  "author": {
+    "name": "Together"
+  },
+  "keywords": ["together", "onboarding", "intern", "coach", "drills", "backend", "frontend"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Together Onboarding",
+    "shortDescription": "Onboard to the Together codebase: backend & frontend, hands-on.",
+    "longDescription": "An interactive onboarding coach for new interns on the Together / Хочу.Вместе project (a Telegram Mini App for Astana). Pick a track — backend (Django, the bot, Celery, sourcing, ML) or frontend (the React mini app in mates/) — and work through short, codebase-grounded drills you do in a real checkout, with progress tracking, backed by the RunDrill MCP engine.",
+    "developerName": "Together",
+    "category": "Education",
+    "capabilities": ["Interactive"],
+    "defaultPrompt": [
+      "Start onboarding me to the Together codebase.",
+      "Put me on the backend track.",
+      "Show my onboarding progress."
+    ],
+    "brandColor": "#3B7AE0"
+  }
+}

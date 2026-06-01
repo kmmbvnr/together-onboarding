@@ -1,0 +1,10 @@
+{
+  "name": "together-onboarding",
+  "displayName": "Together Onboarding",
+  "version": "0.1.0",
+  "description": "Intern onboarding coach for the Together / Хочу.Вместе codebase — guided, hands-on drills through the backend (Django) and frontend (React mini app), inside your AI agent.",
+  "author": {
+    "name": "Together"
+  },
+  "keywords": ["together", "onboarding", "intern", "coach", "drills", "backend", "frontend"]
+}
