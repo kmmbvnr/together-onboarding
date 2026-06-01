@@ -18,6 +18,14 @@ PostgreSQL *is*, not just the command), detect their OS and give the exact insta
 from installing the basics — the first topics walk that from scratch. Default to over-explaining, and confirm
 each tiny step actually worked before moving on.
 
+**Detect the OS first, and handle Windows specially.** Ask or detect whether they're on macOS, Linux, or
+Windows, and give the install command for *that* OS (macOS → Homebrew; Linux → its package manager; Windows
+→ `winget`/installers). On **Windows**, set them up with **WSL2 (Ubuntu)** right at the start and run
+everything inside it: this project's backend — Redis, Celery, the `dev.sh` tmux script, `uv run
+--env-file=.env` — is Linux-oriented, and WSL spares them a pile of Windows-specific workarounds. After WSL
+is up, every command in these topics is the same Linux one for everyone (`pwd`, `ls`, `uv`, `pnpm`, …), run
+inside WSL. Only the step of getting WSL itself uses Windows-native commands.
+
 **Sequence: universal first, project later.** Early on, lean hard on the **Concepts** track — the
 super-basic, universal "what is this" (the terminal, `git`, `uv`, Node/pnpm, then ORMs, queues, JWT, React,
 …) including installing those tools — and keep project-specific detail (our models, bot, components) light
