@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "together-onboarding",
-      "source": "./together-onboarding",
+      "source": "./",
       "description": "Onboarding coach for the Together codebase: hands-on, codebase-grounded drills across general concepts, repo orientation, the backend (Django) and the frontend (mates/), backed by the RunDrill MCP engine. Run /together-onboarding-coach."
     }
   ]
