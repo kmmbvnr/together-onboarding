@@ -11,21 +11,21 @@ as its own one-plugin marketplace.
 
 **Claude Code / Desktop**
 ```
-/plugin marketplace add kmmbvnr/together-onboarding
-/plugin install together-onboarding@together
+/plugin marketplace add kmmbvnr/together-market
+/plugin install together-onboarding@together-market
 /together-onboarding-coach
 ```
 
 **OpenAI Codex**
 ```
-codex plugin marketplace add kmmbvnr/together-onboarding
+codex plugin marketplace add kmmbvnr/together-market
 ```
 then install `together-onboarding` and start the coach.
 
 **Google Antigravity** (no registry — drop the plugin folder in)
 ```
-git clone https://github.com/kmmbvnr/together-onboarding.git
-ln -s "$PWD/together-onboarding" ~/.gemini/config/plugins/together-onboarding
+git clone https://github.com/kmmbvnr/together-market.git
+ln -s "$PWD/together-market" ~/.gemini/config/plugins/together-onboarding
 ```
 
 ## First run
