@@ -7,8 +7,9 @@
     {
       "name": "together-onboarding",
       "source": {
-        "source": "local",
-        "path": "./"
+        "source": "url",
+        "url": "https://github.com/kmmbvnr/together-market.git",
+        "ref": "main"
       },
       "policy": {
         "installation": "AVAILABLE",
